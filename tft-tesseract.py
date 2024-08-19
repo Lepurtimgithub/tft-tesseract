@@ -36,8 +36,7 @@ champion_pools = {
     "5-cost": {champ: 9 for champ in champions_by_cost["5-cost"]}
 }
 
-strong_charms = ["Gear Swap", "Crystal Ball", "Minor Wish", "Zoomify", "Pyromania", "Hugify", "Shivinate", "Die Roll", "Dress Down" , "Conjure Anvil", "Minor Mimicry" , "Golden Dummy",
-                  "Discount","Yordle Spirit", "Earthquake", "Conjure Spatula", "Tinker", "All Fives", "Major Mimicry", "Summon Dragon", "Conjure Artifact", "Magnum Opus", ""]
+strong_charms = ["Gear Swap", "Crystal Ball", "Minor Wish", "Zoomify", "Pyromania", "Hugify", "Shivinate", "Die Roll", "Dress Down" , "Conjure Anvil", "Minor Mimicry" , "Golden Dummy","Discount","Yordle Spirit", "Earthquake", "Conjure Spatula", "Tinker", "All Fives", "Major Mimicry", "Summon Dragon", "Conjure Artifact", "Magnum Opus"]
 
 selected_champions = []
 
@@ -168,14 +167,16 @@ class Overlay(QWidget):
             return
         self.charm_coordinates.clear()
         for i, text in enumerate(ocr_data['text']):
-            for charm in strong_charms:
-                if charm.lower() in text.lower():
-                    x = ocr_data['left'][i]
-                    y = ocr_data['top'][i] + 900
-                    w = ocr_data['width'][i]
-                    h = ocr_data['height'][i]
-                    self.charm_coordinates.append((x, y, w, h))
+            if text.strip():  # Boş metinleri filtrelemek için
+                for charm in strong_charms:
+                    if charm.lower() in text.lower():
+                        x = ocr_data['left'][i]
+                        y = ocr_data['top'][i] + 900
+                        w = ocr_data['width'][i]
+                        h = ocr_data['height'][i]
+                        self.charm_coordinates.append((x, y, w, h))
         self.update()
+
 
     def stop(self):
         self.running = False
