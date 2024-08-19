@@ -36,7 +36,7 @@ champion_pools = {
     "5-cost": {champ: 9 for champ in champions_by_cost["5-cost"]}
 }
 
-strong_charms = ["Gear Swap", "Crystal Ball", "Minor Wish", "Zoomify", "Pyromania", "Hugify", "Shivinate", "Die Roll", "Dress Down" , "Conjure Anvil", "Minor Mimicry" , "Golden Dummy","Discount","Yordle Spirit", "Earthquake", "Conjure Spatula", "Tinker", "All Fives", "Major Mimicry", "Summon Dragon", "Conjure Artifact", "Magnum Opus"]
+strong_charms = ["Gear Swap", "Crystal Ball", "Minor Wish", "Zoomify", "Pyromania", "Hugify", "Shivinate", "Die Roll", "Dress Down" , "Conjure Anvil", "Minor Mimicry" , "Golden Dummy", "Truce", "Discount","Yordle Spirit", "Earthquake", "Conjure Spatula", "Tinker", "All Fives", "Major Mimicry", "Summon Dragon", "Conjure Artifact", "Magnum Opus"]
 
 selected_champions = []
 
