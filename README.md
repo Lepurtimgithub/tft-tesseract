@@ -3,7 +3,9 @@ A bot that can automatically purchase champions using tesseract for TFT.
 Features:
 
 Auto buy
+
 Showing strong charm when appear from market
+
 Manual Pool Tracker
 
 
