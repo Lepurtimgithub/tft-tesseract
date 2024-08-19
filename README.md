@@ -23,6 +23,8 @@ Also, if you want to add other champions or if an update comes and I don't updat
 
 TO DO
 
+UI Design
+
 Show S+ S A tier Augments.
 
 Transition the Pool Tracker section from manual to automatic (if anyone can help, I'm open to help; I don't know how to find pointers in TFT).
